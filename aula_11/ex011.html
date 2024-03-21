@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfândega</title>
+</head>
+<body>
+    <h1>Estrangeiro ou Brasileiro</h1>
+
+   Qual a sua nacionalidade?: <input type="text" name="country" id="country">
+    <input type="button" value="Consultar" onclick="consulta()">
+    <div id="res">
+
+    </div>
+    <script>
+        function consulta(){
+            var nacionalidade = window.document.querySelector('input#country').value
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Seu país de origem é ${nacionalidade}!</p>`
+
+            if (nacionalidade != "Brasil"){
+                res.innerHTML += `<p>Você é um <strong>ESTRANGEIRO</strong>!</p>`
+            }else {
+                res.innerHTML += `<p>Você é um <strong>BRASILEIRO</strong>!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
