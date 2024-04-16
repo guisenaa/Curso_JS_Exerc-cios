@@ -52,12 +52,15 @@ function med(soma){
 }
 
 function analisa (){
-
-    let tamanho = valores.length
-    let maximo = Math.max(...valores)
-    let soma = somar(valores)
-    let media = med(soma)
-
+    
+    if(valores.length == 0){
+        alert('Adicione valores antes de finalizar.')
+    }else{
+        let tamanho = valores.length
+        let maximo = Math.max(...valores)
+        let soma = somar(valores)
+        let media = med(soma)
+    }    
     res.innerHTML = `Ao todo, temos ${tamanho} números cadastrados.<br>`
     res.innerHTML += `O maior valor informado foi o ${maximo}.<br>`
     res.innerHTML += `Somando todos os valores, temos ${soma}.<br>`
